@@ -1,26 +1,60 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <title>Internet mini navigator</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-        <h2>Social Networking Sites</h2>
-        <p>Social Networking Sites (SNS) is an online platform where people can stay connected and create social relationship with various people.</p>
-        <button class="blue-button" onclick="showPanel('sns')">Open Social Media</button>
-
-        <div id="sns" class="panel">
-            <button class="close" onclick="hidePanel('sns')">x</button>
-            <h3>Social Media Sites</h3>
-            <br>
-            <a href="https://www.youtube.com/" target="_blank"><img src="images/yt.png" height="50" width="75"><br>YouTube</a><br><br>
-            <a href="https://www.facebook.com/" target="_blank"><img src="images/fb.png" height="50" width="50"><br>Facebook</a><br><br>
-            <a href="https://www.instagram.com/" target="_blank"><img src="images/insta.webp" height="50" width="50"><br>Instagram</a> 
-        </div>
+<body>
+    <h1>Temperature Converter</h1>
+    <button class="blue-button" onclick="showPanel('celsius-div')">Convert from Celsius</button><br><br>
+    <button class="blue-button" onclick="showPanel('fahrenheit-div')">Convert from Fahrenheit</button><br><br>
+    <button class="blue-button" onclick="showPanel('kelvin-div')">Convert from Kelvin</button>
 
 
-        <script src="script.js"></script>
-    </body>
+    <div class="container" id="celsius-div">
+        <h1>Convert from Celsius</h1>
+        Celsius: <input type="text" class="box" id="celsius1"><br><br>
+        <button class="blue-button" onclick="convert(1);">Update</button>
+        <br>
+        <hr><br>
+        Fahrenheit: <input type="text" class="box" id="fahrenheit1" readonly>
+        <br><br>
+        Kelvin: <input type="text" class="box" id="kelvin1" readonly>
+
+        <button class="close-button" onclick="hidePanel('celsius-div')">x</button>
+    </div>
+
+    <div class="container" id="fahrenheit-div">
+        <h1>Convert from Fahrenheit</h1>
+        Fahrenheit: <input type="text" class="box" id="fahrenheit2"><br><br>
+        <button class="blue-button" onclick="convert(2);">Update</button>
+        <br>
+        <hr><br>
+        Celsius: <input type="text" class="box" id="celsius2" readonly>
+        <br><br>
+        Kelvin: <input type="text" class="box" id="kelvin2" readonly>
+
+        <button class="close-button" onclick="hidePanel('fahrenheit-div')">x</button>
+    </div>
+
+    <div class="container" id="kelvin-div">
+        <h1>Convert from Kelvin</h1>
+        Kelvin: <input type="text" class="box" id="kelvin3"><br><br>
+        <button class="blue-button" onclick="convert(3);">Update</button>
+        <br>
+        <hr><br>
+        Celsius: <input type="text" class="box" id="celsius3" readonly>
+        <br><br>
+        Fahrenheit: <input type="text" class="box" id="fahrenheit3" readonly>
+
+        <button class="close-button" onclick="hidePanel('kelvin-div')">x</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
